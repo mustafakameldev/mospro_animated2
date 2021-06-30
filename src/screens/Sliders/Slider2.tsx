@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, Alert, Button} from 'react-native';
-import {shadowStyle} from './style';
+import {shadowStyle} from '../style';
 import Knob from './Knob';
 import Animated, {
   useAnimatedStyle,
@@ -11,8 +11,8 @@ import Animated, {
   Easing,
 } from 'react-native-reanimated';
 import {PanGestureHandler} from 'react-native-gesture-handler';
-import {useSlider} from '../components/useSlider';
-import AnimatedText from '../components/AnimatedText';
+import {useSlider} from '../../components/useSlider';
+import AnimatedText from '../../components/AnimatedText';
 
 const SLIDER_WIDTH = 300;
 const KNOB_WIDTH = 30;

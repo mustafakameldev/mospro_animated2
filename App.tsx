@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import Home from './src/screens/Mospro/index';
+import Router from './src/screens/AnimatedListView';
 const App = () => {
-  return <Home />;
+  return <Router />;
 };
 
 export default App;

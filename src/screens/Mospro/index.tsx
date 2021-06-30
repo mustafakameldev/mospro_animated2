@@ -1,12 +1,24 @@
 import React from 'react';
-import {StyleSheet, Dimensions, Text, View} from 'react-native';
+import {StyleSheet, Dimensions, Image, Text, View} from 'react-native';
 import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
 } from 'react-native-reanimated';
-import Page from '../../components/Page';
+
 const {height, width} = Dimensions.get('window');
 const WORDS = ["What's", 'up', 'mobile', 'devs?'];
+import Page from './Page';
+const IMAGES = [
+  {
+    src: require('../../../assets/back.jpg'),
+  },
+  {
+    src: require('../../../assets/up.png'),
+  },
+  {
+    src: require('../../../assets/down.png'),
+  },
+];
 export default function App() {
   const translateX = useSharedValue(0);
   const scrollHandler = useAnimatedScrollHandler(event => {
@@ -19,7 +31,7 @@ export default function App() {
       scrollEventThrottle={16}
       horizontal
       style={styles.container}>
-      {WORDS.map((title, index) => {
+      {/* {WORDS.map((title, index) => {
         return (
           <Animated.ScrollView
             style={{
@@ -28,17 +40,21 @@ export default function App() {
               width: width,
               backgroundColor: `rgba(0,0,0,${index / 5})`,
             }}>
-            <View
+            {/* <View
               style={{
                 height: height,
                 width: width,
-                alignItems: 'center',r
+                alignItems: 'center',
                 justifyContent: 'center',
               }}>
               <Text>{title}</Text>
-            </View>
+            </View> 
+            
           </Animated.ScrollView>
         );
+      })} */}
+      {IMAGES.map((img, index) => {
+        return <Page img={img} />;
       })}
     </Animated.ScrollView>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {shadowStyle} from './style';
+import {shadowStyle} from '../style';
 
 const SLIDER_WIDTH = 300;
 const KNOB_WIDTH = 30;
